@@ -15,11 +15,6 @@ pipeline {
                 sh './vendor/bin/phpunit tests'
             }
 		}
-		stage('Checkout SCM') {
-			steps {
-				git '/home/JenkinsDependencyCheckTest'
-			}
-		}
 
 		stage('OWASP DependencyCheck') {
 			steps {
