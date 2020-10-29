@@ -1,5 +1,8 @@
 pipeline {
 	agent any
+	tools {
+       dependency-check "OWASP Dependency-Check"
+    }
 	stages {
 		stage('OWASP DependencyCheck') {
 			steps {
