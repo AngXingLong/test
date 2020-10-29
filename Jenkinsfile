@@ -2,7 +2,9 @@ pipeline {
 	agent any
 	stages {
 		stage("composer_install") {
-        	sh 'composer install'
+			steps {
+        		sh 'composer install'
+			}
     	}
 		stage('OWASP DependencyCheck') {
 			steps {
